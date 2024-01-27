@@ -39,7 +39,6 @@ export class EmployeeService {
       user.isActive = true
       user.firstName = createEmployeeDto.firstName
       user.lastName = createEmployeeDto.lastName
-      // user.userType = "employee"
       user.password = this.authRepository.encodePassword(createEmployeeDto.password);
 
       this.userRepository.save(user);
